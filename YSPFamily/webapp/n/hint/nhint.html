@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YSP Family - Hint</title>
+
+  <link rel="stylesheet" href="nhint.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../home.html" class="nav-link">Home</a>
+        <a id="hintLink" class="nav-link" href="nhint.html">Hint</a>
+        <a id="chatLink" class="nav-link" href="../chat/nchat.html">Chat</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="dropdown">
+          <button id="userEmail" class="dropdown-btn">email@example.com</button>
+          <div class="dropdown-content">
+            <button id="logoutBtn">ออกจากระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ กล่องแสดงคำใบ้ -->
+  <main>
+    <h2>คำใบ้จากพี่</h2>
+    <div id="chatBox" class="chat-box"></div>
+  </main>
+
+  <script type="module" src="nhint.js"></script>
+</body>
+</html>

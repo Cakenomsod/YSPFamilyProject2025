@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YSP Family - Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="home.html" class="nav-link">Home</a>
+        <a id="hintLink" class="nav-link">Hint</a>
+        <a id="chatLink" class="nav-link">Chat</a>
+      </div>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button id="userEmail" class="dropdown-btn">email@example.com</button>
+          <div class="dropdown-content">
+            <button id="logoutBtn">ออกจากระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>ข้อมูลผู้ใช้</h2>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อจริง-นามสกุล :</span>
+      <span class="info-value" id="name">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อเล่น :</span>
+      <span class="info-value" id="nickname">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">อีเมล :</span>
+      <span class="info-value" id="email">-</span>
+    </div>
+
+  </div>
+
+  <div class="container" id="littleContainer">
+    <h2>ข้อมูลน้องม.4</h2>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อจริง-นามสกุล :</span>
+      <span class="info-value" id="littleName">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อเล่น :</span>
+      <span class="info-value" id="littleNickname">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">เลขที่ :</span>
+      <span class="info-value" id="littleNumber">-</span>
+    </div>
+  </div>
+
+  <div class="container" id="PContainer">
+    <h2>ข้อมูลน้องม.5</h2>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อจริง-นามสกุล :</span>
+      <span class="info-value" id="PName">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อเล่น :</span>
+      <span class="info-value" id="PNickname">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อปลอมไว้หลอกเด็ก :</span>
+      <span class="info-value" id="PFakename">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">เลขที่ :</span>
+      <span class="info-value" id="PNumber">-</span>
+    </div>
+  </div>
+
+  <div class="container" id="OLDContainer">
+    <h2>ข้อมูลพี่ม.6</h2>
+
+    <div class="info-row">
+      <span class="info-label">ชื่อเล่น :</span>
+      <span class="info-value" id="OLDNickname">-</span>
+    </div>
+
+    <div class="info-row">
+      <span class="info-label">เลขที่ :</span>
+      <span class="info-value" id="OLDNumber">-</span>
+    </div>
+
+  </div>
+
+
+
+  <script type="module" src="home.js"></script>
+</body>
+</html>

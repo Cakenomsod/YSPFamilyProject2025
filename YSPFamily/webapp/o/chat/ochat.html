@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YSP Family - Chat</title>
+  <link rel="stylesheet" href="ochat.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../home.html" class="nav-link">Home</a>
+        <a id="hintLink" class="nav-link" href="../hint/ohint.html">Hint</a>
+        <a id="chatLink" class="nav-link" href="ochat.html">Chat</a>
+      </div>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button id="userEmail" class="dropdown-btn">email@example.com</button>
+          <div class="dropdown-content">
+            <button id="logoutBtn">ออกจากระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="chat-container">
+    <h2>แชทคนแก่กับหลานๆ</h2>
+
+    <!-- ✅ กล่องแสดงข้อความแบบ scroll -->
+    <div id="chatBox" class="chat-box"></div>
+
+    <!-- ✅ ช่องพิมพ์และปุ่มส่ง -->
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="พิมพ์ข้อความ..." />
+      
+      <div class="file-upload">
+        <label for="file-upload">Upload a file:</label>
+        <input type="file" id="file-upload" name="file-upload" title="Choose a file to upload">
+        <button id="uploadImageBtn">อัปโหลดรูป</button>
+      </div>
+      
+      <button id="sendBtn">ส่ง</button>
+    </div>
+  </div>
+
+  <script type="module" src="ochat.js"></script>
+</body>
+</html>

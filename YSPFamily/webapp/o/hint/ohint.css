@@ -1,0 +1,231 @@
+/* รีเซ็ตพื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #f4f7f9;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ====== Navbar Minimal & Center ====== */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  position: relative;
+  z-index: 10;
+  
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+
+  align-items: center;
+  position: relative;
+}
+
+/* ====== เมนูอยู่ตรงกลาง ====== */
+.nav-left {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007BFF;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007BFF;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ====== ปุ่มอีเมลอยู่ขวาสุด ====== */
+.nav-right {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* ====== Dropdown ====== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.75rem 1rem; /* เดิมแค่ 0.5rem */
+  transition: color 0.3s ease;
+}
+
+
+.dropdown-btn:hover {
+  color: #007BFF;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* เดิมคือ 120% */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-5px); /* ปรับจาก -10px ให้ใกล้ขึ้น */
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+.dropdown-content a,
+.dropdown-content button {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover,
+.dropdown-content button:hover {
+  background-color: #f5f5f5;
+  color: #007BFF;
+}
+
+/* ====== Responsive (มือถือ) ====== */
+@media (max-width: 768px) {
+  .nav-left {
+    gap: 1rem;
+  }
+
+  .nav-right {
+    right: 1rem;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+#chatBox {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.balloon {
+  max-width: 60%;
+  background: #d0f0fd;
+  color: #003344;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 25px 25px 25px 5px;
+  position: relative;
+  align-self: flex-start;
+  animation: float 0.4s ease-out;
+  word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.balloon-img {
+  max-width: 100%;
+  border-radius: 16px;
+  margin-top: 0.5rem;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.hint-message {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #ffffff;
+  border-left: 4px solid #007BFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}

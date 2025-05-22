@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSP Family - Hint</title>
+
+    <link rel="stylesheet" href="phint.css">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="../../home.html" class="nav-link">Home</a>
+        <a id="hintLink" class="nav-link" href="phint.html">Hint</a>
+        <a id="chatLink" class="nav-link" href="../chat/pchat.html">Chat</a>
+      </div>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button id="userEmail" class="dropdown-btn">email@example.com</button>
+          <div class="dropdown-content">
+            <button id="logoutBtn">ออกจากระบบ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <main>
+    <div class="chat-container">
+      <h2>คำใบ้จากพี่</h2>
+      <div id="chatBox"></div>
+      <div class="chat-input disabled">
+        <input type="text" id="messageInput" placeholder="ใส่คำใบ้ลงไป!!" />
+        <button id="sendBtn">ส่ง</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script type="module" src="phint.js"></script>
+</body>
+</html>
